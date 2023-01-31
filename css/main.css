@@ -14,14 +14,77 @@ h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 1rem;
+h2 {
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+a:focus {
+  outline: 4px dashed black;
 }
 
 img {
   width: 100%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1em;
+  background-color: #f2f2f2;
+}
+
+
+
+/* Skip links*/
+
+.skip-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-links a {
+  position: absolute;
+  top: -3em;
+  background-color: black;
+  color: white;
+  padding: .5em 1em;
+  font-weight: 700;
+}
+
+.skip-links a:focus {
+  top: 0;
+}
+
+
+
+/* Header section */
+
+nav .container {
+  padding: 0;
+  max-width: 1112px;
+}
+
+/* Reset h1's since Chrome will automatically make nested h1s in navs smaller */
+h1 {
+  display: block;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0.5em;
+  padding-left: 1rem;
+  font-weight: 700;
 }
 
 .main-nav ul {
@@ -35,21 +98,103 @@ img {
 .main-nav ul li {
   flex: 1;
   text-align: center;
+  background-color: burlywood;
 }
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: black;
   text-decoration: none;
   font-size: 1.25rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: #222222;
+  color: #f2f2f2;
+}
+
+.main-nav a:active {
+  background-color: #f2f2f2;
+  color:#222222;
+}
+
+header .banner-image {
+  background-image: url(https://placekitten.com/1200/900);
+  background-size: cover;
+  background-position: 50% 30%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: 8em;
+}
+
+
+
+/* About section */
+
+#section-about {
+  background-color: #ffe6ac;
+}
+
+#section-about .container {
+  background-color: #ffe6ac;
+}
+
+.cat-frame {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.cat-photo {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+#section-about .container::after {
+  content: "";
+  clear: both;
+  display: flex;
+}
+
+
+
+/* Owner section */
+
+.owner-info-container dl {
+  padding-top: .2em;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+}
+
+.owner-info-container dt {
+  font-weight: 700;
+}
+
+.owner-info-container dd {
+  padding-bottom: 0.5em;
+  margin: 0;
+}
+
+
+
+/* Contact section */
+
+.section-contact .container {
+  padding-bottom: 1em;
+  margin-bottom: 0;
 }
 
 form input,
 form textarea {
   display: block;
-  width: 100%;
+  width: 96%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: .5em 1em;
+  
 }
 
 form textarea {
@@ -60,12 +205,91 @@ form textarea {
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
-  padding: 1rem;
+  background-color: #222222;
+  color: burlywood;
+  border: 2px solid #c78b07;
+  padding: 1em;
   text-transform: uppercase;
 }
 
-.site-footer {
-  padding: 2rem 0;
+
+form button:hover {
+  color: #222222;
+  background-color: burlywood;
+  border: 2px solid #222222;
 }
+
+form button:active {
+  background-color: #f2f2f2;
+  color:#222222;
+}
+
+
+
+/* Footer section */
+
+footer {
+  margin-top: 0;
+}
+
+footer .container {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+
+
+/* Mobile Styles */
+
+
+/* Although not following mobile first design, media queries will stack main-nav buttons atop eachother */
+@media screen and (max-width: 630px) {
+  .main-nav ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
+  background-color: #f2f2f2;
+} */
+
+/* header {
+  background-color: teal;
+}
+
+nav {
+  background-color: brown;
+}
+
+main {
+  background-color: purple;
+}
+
+footer {
+  background-color: pink;
+} */
+
